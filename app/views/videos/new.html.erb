@@ -1,0 +1,13 @@
+<div>
+  <%= form_for(@videos) do |f|%>
+  <div class="form-group">
+    <%= f.label :title, "Title" %>
+    <%= f.text_field :title, placeholder: "Insert Title" %></br>
+    <%= f.label :description, "Description" %>
+    <%= f.text_area :description, placeholder: "Insert description" %></br>
+    <%= f.label :video, "Upload Video" %>
+    <%= f.file_field :video %></br>
+    <%= f.submit "Submit", class: 'btn btn-primary' %>
+  </div>
+  <% end %>
+</div>

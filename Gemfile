@@ -16,6 +16,7 @@ gem 'gon'
 gem 'opentok'
 gem 'devise'
 gem 'streamio-ffmpeg'
+gem 'carrierwave'
 
 group :development do
   gem 'web-console'
