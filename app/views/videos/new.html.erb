@@ -2,11 +2,11 @@
   <%= form_for(@videos) do |f|%>
   <div class="form-group">
     <%= f.label :title, "Title" %>
-    <%= f.text_field :title, placeholder: "Insert Title" %></br>
+    <%= f.text_field :title, class:"form-control", placeholder: "Insert Title" %></br>
     <%= f.label :description, "Description" %>
-    <%= f.text_area :description, placeholder: "Insert description" %></br>
+    <%= f.text_area :description, class:"form-control", placeholder: "Insert description" %></br>
     <%= f.label :video, "Upload Video" %>
-    <%= f.file_field :video %></br>
+    <%= f.file_field :video, class:"form-control-file" %></br>
     <%= f.submit "Submit", class: 'btn btn-primary' %>
   </div>
   <% end %>
