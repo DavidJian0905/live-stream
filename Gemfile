@@ -10,6 +10,7 @@ gem 'turbolinks'
 
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
+gem 'jquery-turbolinks'
 
 gem 'figaro'
 gem 'gon'
