@@ -7,6 +7,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'turbolinks'
+gem 'sprockets-rails', :require => 'sprockets/railtie'
 
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
@@ -18,6 +19,7 @@ gem 'opentok'
 gem 'devise'
 gem 'streamio-ffmpeg'
 gem 'carrierwave'
+gem 'bootstrap'
 
 group :development do
   gem 'web-console'
