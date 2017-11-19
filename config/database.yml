@@ -74,6 +74,5 @@ development:
 #
 production:
   <<: *default
-  database: broadcaster_production
-  username: broadcaster
-  password: <%= ENV['BROADCASTER_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  database: ENV["DATABASE_URL"]

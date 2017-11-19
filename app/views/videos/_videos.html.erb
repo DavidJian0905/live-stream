@@ -1,5 +1,5 @@
   <% @videos.each do |video| %>
-<div class="card">
+<div>
     <h2><%= video.title %></h2>
     <%= video_tag(video.video_url.to_s, :controls => true) %>
 </div>

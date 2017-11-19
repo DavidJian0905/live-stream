@@ -1,7 +1,7 @@
 <div>
   <h2><%= @video.title %></h2>
   <div>
-  <%= @video.video %>
+    <%= video_tag(@video.video_url.to_s, :controls => true) %>
   </div>
   <p><%= @video.description %></p>
 </div>
