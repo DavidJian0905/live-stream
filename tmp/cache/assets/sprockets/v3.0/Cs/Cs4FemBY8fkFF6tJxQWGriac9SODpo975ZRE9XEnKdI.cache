@@ -1,0 +1,25 @@
+I"t(function() {
+  $(function() {
+    var publisher, session, videoOptions;
+    if ($('#publisher').length) {
+      session = TB.initSession(gon.opentok.sessionId);
+      videoOptions = {
+        width: 640,
+        height: 480
+      };
+      publisher = TB.initPublisher(gon.opentok.apiKey, 'publisher', videoOptions);
+      session.on({
+        sessionConnected: function(event) {
+          if (session.capabilities.publish === 1) {
+            return session.publish(publisher);
+          } else {
+
+          }
+        }
+      });
+      return session.connect(gon.opentok.apiKey, gon.opentok.token);
+    }
+  });
+
+}).call(this);
+:ET

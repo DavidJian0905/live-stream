@@ -1,0 +1,20 @@
+I"Þ(function() {
+  $(function() {
+    var session, videoOptions;
+    if ($('#stream').length) {
+      session = TB.initSession(gon.opentok.sessionId);
+      videoOptions = {
+        width: 640,
+        height: 480
+      };
+      session.on({
+        streamCreated: function(event) {
+          return session.subscribe(event.stream, $('#stream')[0], videoOptions);
+        }
+      });
+      return session.connect(gon.opentok.apiKey, gon.opentok.token);
+    }
+  });
+
+}).call(this);
+:ET
