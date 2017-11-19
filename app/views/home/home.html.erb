@@ -5,4 +5,9 @@
   <div class="btn btn-light">
   <%= link_to "Start Streaming", stream_path %>
   </div>
+  <% if user_signed_in? %>
+    <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+  <% else %>
+    <%= link_to('Login', new_user_session_path)  %>
+  <% end %>
 </div>
