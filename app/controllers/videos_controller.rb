@@ -23,9 +23,11 @@ class VideosController < ApplicationController
   end
 
   def destroy
-    @videos.destroy
-    respond_to do |format|
-      format.html {redirect_to videos_path, notice: 'Video Have been removed.'}
+    @video = Video.find(params[:id])
+    if @video.delete
+      respond_to do |format|
+        format.html {redirect_to videos_path, notice: 'Video Have been removed.'}
+      end
     end
   end
 

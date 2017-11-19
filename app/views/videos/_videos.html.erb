@@ -1,6 +1,6 @@
   <% @videos.each do |video| %>
 <div>
-    <h2><%= video.title %></h2>
+    <h2><%= link_to "#{video.title}", video_path(video) %></h2>
     <%= video_tag(video.video_url.to_s, :controls => true) %>
 </div>
   <% end %>
